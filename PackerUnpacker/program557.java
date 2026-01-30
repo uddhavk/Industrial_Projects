@@ -1,0 +1,23 @@
+// create a new file
+import java.io.*;
+import java.util.*;
+
+class program557
+{
+    public static void main() throws Exception
+    {
+        File fobj = new File("Demo.txt");
+
+        boolean bRet =  fobj.createNewFile();
+
+        if(bRet == true)
+        {
+            System.out.println("File gets created successfully");
+        }
+        else
+        {
+            System.out.println("Unable to create file");
+        }
+
+    }
+}

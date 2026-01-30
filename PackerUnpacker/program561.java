@@ -1,0 +1,22 @@
+// create a new file by user input and write the data in the file
+import java.io.*;
+import java.util.*;
+
+class program561
+{
+    public static void main() throws Exception
+    {
+        String FileName = null;
+        boolean bRet = false;
+        File fobj = null;
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter the name of file :");
+        FileName = sobj.nextLine();
+
+        FileWriter fwobj = new FileWriter(FileName);
+
+
+        sobj.close();
+    }
+}

@@ -1,0 +1,33 @@
+// create a new file by user input and FileOutputStream its for writing the data in file
+import java.io.*;
+import java.util.*;
+
+class program569
+{
+    public static void main() throws Exception
+    {
+        String FileName = null;
+        boolean bRet = false;
+        File fobj = null;
+
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter the name of file :");
+        FileName = sobj.nextLine();
+
+        fobj = new File(FileName);
+
+        if(fobj.exists())
+        {             
+            FileOutputStream foobj = new FileOutputStream(fobj);
+            String str = "Jay Ganesh...";
+            foobj.write(str);   // Error
+        }
+        else
+        {
+            System.out.println("There is no such file");
+        }   
+
+        sobj.close();
+    }
+}
