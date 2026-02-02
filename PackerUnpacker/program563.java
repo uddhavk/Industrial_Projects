@@ -7,8 +7,6 @@ class program563
     public static void main() throws Exception
     {
         String FileName = null;
-        boolean bRet = false;
-        File fobj = null;
         Scanner sobj = new Scanner(System.in);
 
         System.out.println("Enter the name of file :");

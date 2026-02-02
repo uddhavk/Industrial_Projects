@@ -1,8 +1,9 @@
-// folder
+// folder Encryption Decryption
+// check file regular or not
 import java.io.*;
 import java.util.*;
 
-class program585
+class program589
 {
     public static void main() throws Exception
     {
@@ -39,11 +40,15 @@ class program585
                 fiobj = new FileInputStream(fArr[i]);
 
                 System.out.println("File Name : "+ fArr[i].getName() + " File Size : "+fArr[i].length()+" Bytes");
-                
-                while((iRet = fiobj.read(Buffer)) != -1)
+
+                if(fArr[i].isFile() == true)
                 {
-                    foobj.write(Buffer,0,iRet);
-                }
+                    while((iRet = fiobj.read(Buffer)) != -1)
+                    {
+                        foobj.write(Buffer,0,iRet);
+                    }
+                }                
+                
                 fiobj.close();              
             }
             foobj.close();
@@ -51,8 +56,9 @@ class program585
         else
         {
             System.out.println("There is no such Folder");
-        }    
+        }   
         
         sobj.close();
+        
     }
 }

@@ -7,7 +7,6 @@ class program567
     public static void main() throws Exception
     {
         String FileName = null;
-        boolean bRet = false;
         File fobj = null;
         FileReader frobj = null;
 
